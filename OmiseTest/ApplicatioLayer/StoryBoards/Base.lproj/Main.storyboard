@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aw0-ZY-2Rd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="IyW-Yb-qyx">
+            <objects>
+                <navigationController id="aw0-ZY-2Rd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sau-UC-nSI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UGF-x8-W32"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQB-6p-xYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663" y="134"/>
+        </scene>
+        <!--Charities List Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="OTCharitiesListController" customModule="OmiseTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Charities Available." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-mb-2g6">
+                                <rect key="frame" x="102.5" y="355.5" width="170.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="doY-0z-raC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellForCharityList" rowHeight="102" id="S9F-OQ-gt1" customClass="OTCharityListTableViewCell" customModule="OmiseTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S9F-OQ-gt1" id="9F7-tg-Ycw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hQU-Jv-fWk">
+                                                    <rect key="frame" x="15" y="17" width="106" height="67.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="106" id="81V-g7-3ym"/>
+                                                        <constraint firstAttribute="height" constant="67.5" id="9v1-LS-sDx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charity Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsa-Qf-VNd">
+                                                    <rect key="frame" x="151" y="32.5" width="209" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="jDh-ps-fdT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="hQU-Jv-fWk" firstAttribute="leading" secondItem="9F7-tg-Ycw" secondAttribute="leading" constant="15" id="72T-mA-zY7"/>
+                                                <constraint firstAttribute="bottom" secondItem="hQU-Jv-fWk" secondAttribute="bottom" constant="17" id="PlH-OY-p8g"/>
+                                                <constraint firstItem="gsa-Qf-VNd" firstAttribute="leading" secondItem="hQU-Jv-fWk" secondAttribute="trailing" constant="30" id="XUw-6J-nCB"/>
+                                                <constraint firstItem="hQU-Jv-fWk" firstAttribute="top" secondItem="9F7-tg-Ycw" secondAttribute="top" constant="17" id="Xhv-Bt-AVw"/>
+                                                <constraint firstItem="gsa-Qf-VNd" firstAttribute="centerY" secondItem="hQU-Jv-fWk" secondAttribute="centerY" id="iPG-HE-bF4"/>
+                                                <constraint firstAttribute="trailing" secondItem="gsa-Qf-VNd" secondAttribute="trailing" constant="15" id="j4r-Ke-TZ5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="imgCharityIcon" destination="hQU-Jv-fWk" id="iEI-pG-YQc"/>
+                                            <outlet property="lblCharityName" destination="gsa-Qf-VNd" id="rsd-bh-c0W"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9r9-WK-QT8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yoJ-BM-rjR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="doY-0z-raC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3lh-NE-QMG"/>
+                            <constraint firstItem="doY-0z-raC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4he-bK-Vqz"/>
+                            <constraint firstItem="doY-0z-raC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EN9-fK-08j"/>
+                            <constraint firstItem="Nhw-mb-2g6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Svk-dU-DEU"/>
+                            <constraint firstItem="Nhw-mb-2g6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bNZ-62-xJG"/>
+                            <constraint firstItem="doY-0z-raC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dYQ-8N-Ebj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p8M-MR-F08"/>
+                    <connections>
+                        <outlet property="lblNoCharityAvailable" destination="Nhw-mb-2g6" id="MUk-sz-Yfm"/>
+                        <outlet property="tblCharityListing" destination="doY-0z-raC" id="ZlD-pU-hZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Donation Details Controller View Controller-->
+        <scene sceneID="y0F-Be-DXq">
+            <objects>
+                <viewController storyboardIdentifier="OTDonationDetailsControllerViewController" id="bmo-aP-HQj" customClass="OTDonationDetailsControllerViewController" customModule="OmiseTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HBu-It-WiD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your donation amount (THB) for Charity." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqY-PE-utZ">
+                                <rect key="frame" x="27" y="61" width="319" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4Rh-eg-ncJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ow4-aq-doh" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="27" y="102" width="319" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0vT-Ks-Lnz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Donation Amount"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="bmo-aP-HQj" id="gl2-Iv-gtf"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vON-gf-CF0" customClass="MFCardView" customModule="MFCard">
+                                <rect key="frame" x="37" y="188" width="300" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FIv-Us-Iiy"/>
+                                    <constraint firstAttribute="height" constant="240" id="jZD-ir-iw8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="MMYYTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="cardImage" value="world-map"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="frontChromeColor">
+                                        <color key="value" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="frontChromeAlpha">
+                                        <real key="value" value="0.81000000000000005"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backChromeColor">
+                                        <color key="value" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="backChromeAlpha">
+                                        <real key="value" value="0.81999999999999995"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backTape">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="TF_Color">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="TF_TextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="controlButtonsRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cardRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="placeholder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cvvPasswordType" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vON-gf-CF0" firstAttribute="top" secondItem="ow4-aq-doh" secondAttribute="bottom" constant="25" id="7NN-6S-gIT"/>
+                            <constraint firstItem="4hn-au-BRs" firstAttribute="trailing" secondItem="vON-gf-CF0" secondAttribute="trailing" constant="38" id="Cxw-bs-8Bg"/>
+                            <constraint firstItem="NqY-PE-utZ" firstAttribute="leading" secondItem="4hn-au-BRs" secondAttribute="leading" constant="27" id="GeO-mK-vuG"/>
+                            <constraint firstItem="4hn-au-BRs" firstAttribute="trailing" secondItem="NqY-PE-utZ" secondAttribute="trailing" constant="29" id="I4t-Op-4Uh"/>
+                            <constraint firstItem="ow4-aq-doh" firstAttribute="leading" secondItem="4hn-au-BRs" secondAttribute="leading" constant="27" id="XPG-ph-bXp"/>
+                            <constraint firstItem="vON-gf-CF0" firstAttribute="leading" secondItem="4hn-au-BRs" secondAttribute="leading" constant="37" id="aSp-fQ-9ax"/>
+                            <constraint firstItem="NqY-PE-utZ" firstAttribute="top" secondItem="4hn-au-BRs" secondAttribute="top" constant="20" id="gp5-pg-rYC"/>
+                            <constraint firstItem="4hn-au-BRs" firstAttribute="trailing" secondItem="ow4-aq-doh" secondAttribute="trailing" constant="29" id="kfk-df-gdb"/>
+                            <constraint firstItem="ow4-aq-doh" firstAttribute="top" secondItem="NqY-PE-utZ" secondAttribute="bottom" constant="15" id="zHk-TY-vP9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4hn-au-BRs"/>
+                    </view>
+                    <connections>
+                        <outlet property="creditCardView" destination="vON-gf-CF0" id="D9I-cz-1ur"/>
+                        <outlet property="lblCharityName" destination="NqY-PE-utZ" id="4LN-le-ycC"/>
+                        <outlet property="txtEnterDonationAmount" destination="ow4-aq-doh" id="ND8-YH-gN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcF-aL-L5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848.79999999999995" y="133.5832083958021"/>
+        </scene>
+        <!--Donation Success Controller-->
+        <scene sceneID="NRD-P7-8RR">
+            <objects>
+                <viewController storyboardIdentifier="OTDonationSuccessController" id="cSL-9l-SXl" customClass="OTDonationSuccessController" customModule="OmiseTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CTm-kz-bsz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thanks_img" translatesAutoresizingMaskIntoConstraints="NO" id="izl-JO-NW5">
+                                <rect key="frame" x="23" y="67" width="329" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="NY2-M6-HFG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CG-oG-sGh">
+                                <rect key="frame" x="112.5" y="278" width="150" height="37"/>
+                                <color key="backgroundColor" red="0.87880505180000001" green="0.87880505180000001" blue="0.87880505180000001" alpha="0.38303257039999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="JVu-iE-xup"/>
+                                    <constraint firstAttribute="height" constant="37" id="PGB-Sz-fGp"/>
+                                </constraints>
+                                <state key="normal" title="Donate More">
+                                    <color key="titleColor" red="0.0" green="0.69411764710000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDismissClicked:" destination="cSL-9l-SXl" eventType="touchUpInside" id="z0f-u8-gTf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9CG-oG-sGh" firstAttribute="centerX" secondItem="izl-JO-NW5" secondAttribute="centerX" id="AK4-GZ-ya0"/>
+                            <constraint firstItem="oqO-Pj-uUc" firstAttribute="trailing" secondItem="izl-JO-NW5" secondAttribute="trailing" constant="23" id="NyD-AP-q3g"/>
+                            <constraint firstItem="9CG-oG-sGh" firstAttribute="top" secondItem="izl-JO-NW5" secondAttribute="bottom" constant="26" id="O3B-Zb-9Hz"/>
+                            <constraint firstItem="izl-JO-NW5" firstAttribute="top" secondItem="oqO-Pj-uUc" secondAttribute="top" constant="47" id="RPd-qo-0Uz"/>
+                            <constraint firstItem="izl-JO-NW5" firstAttribute="leading" secondItem="oqO-Pj-uUc" secondAttribute="leading" constant="23" id="oTI-b2-wcZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oqO-Pj-uUc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBk-dL-HGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848.79999999999995" y="808.24587706146929"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="thanks_img" width="559" height="396"/>
+        <image name="world-map" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_OmiseTest {
+  umbrella header "Pods-OmiseTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

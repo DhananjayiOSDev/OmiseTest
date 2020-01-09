@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.9.1)
+  - IQKeyboardManagerSwift (6.5.4)
+  - MFCard (1.2.6)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManagerSwift
+  - MFCard
+  - SDWebImage (~> 4.0)
+  - SkyFloatingLabelTextField
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - MFCard
+    - SDWebImage
+    - SkyFloatingLabelTextField
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  MFCard: a441d4f13b9d53b888b44108cb56b10bed766ca7
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: a947c14b1230f753c2ab24e09998d4197e23c101
+
+COCOAPODS: 1.8.4
